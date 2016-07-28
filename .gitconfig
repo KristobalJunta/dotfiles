@@ -1,0 +1,17 @@
+[user]
+	name = Kristobal
+	email = junta.kristobal@gmail.com
+[credential]
+	helper = store
+[push]
+	default = simple
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	t = tag
+	deploy = push live master
+	unstage = reset HEAD --
+	a = add .
+	m = merge --no-ff
