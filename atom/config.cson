@@ -1,0 +1,45 @@
+"*":
+  core:
+    allowPendingPaneItems: false
+    closeEmptyWindows: false
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "language-gfm"
+    ]
+    ignoredNames: [
+      "node_modules"
+      ".git"
+    ]
+    projectHome: "/home/work/"
+  editor:
+    backUpBeforeSaving: true
+    fontSize: 15
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+    tabType: "soft"
+    zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "30538d73-46b5-06b0-1314-ac6f76f130fe"
+  "jscs-fixer":
+    defaultPreset: "node-style-guide"
+  linter: {}
+  "markdown-preview": {}
+  "markdown-preview-plus": {}
+  minimap: {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "
+"php-debug":
+  PathMaps: [
+    "remotepath;localpath"
+    "/base/path/on/remote/system;C:\\base\\path\\on\\local\\system"
+  ]
+  ServerPort: 9000
