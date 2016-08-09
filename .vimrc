@@ -22,7 +22,7 @@ set whichwrap+=<,>,h,l
 set ignorecase
 set smartcase
 set hlsearch
-set incsearch 
+set incsearch
 set showmatch
 
 " Syntax coloring
