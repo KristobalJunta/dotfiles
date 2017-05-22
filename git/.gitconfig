@@ -1,8 +1,9 @@
+# ~/.gitconfig
+# by @KristobalJunta
+
 [user]
 	name = Kristobal
 	email = junta.kristobal@gmail.com
-[credential]
-	helper = store
 [push]
 	default = simple
 [alias]
@@ -11,7 +12,5 @@
 	ci = commit
 	st = status
 	t = tag
-	deploy = push live master
 	unstage = reset HEAD --
-	a = add .
-	m = merge --no-ff
+	all = add .
