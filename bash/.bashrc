@@ -1,61 +1,87 @@
-#
 # ~/.bashrc
-#
+# by @KristobalJunta
 
-[[ $- != *i* ]] && return
 
-colors() {
-	local fgc bgc vals seq0
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
-	printf "Color escapes are %s\n" '\e[${value};...;${value}m'
-	printf "Values 30..37 are \e[33mforeground colors\e[m\n"
-	printf "Values 40..47 are \e[43mbackground colors\e[m\n"
-	printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
-	# foreground colors
-	for fgc in {30..37}; do
-		# background colors
-		for bgc in {40..47}; do
-			fgc=${fgc#37} # white
-			bgc=${bgc#40} # black
+# append to the history file, don't overwrite it
+shopt -s histappend
 
-			vals="${fgc:+$fgc;}${bgc}"
-			vals=${vals%%;}
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
 
-			seq0="${vals:+\e[${vals}m}"
-			printf "  %-9s" "${seq0:-(default)}"
-			printf " ${seq0}TEXT\e[m"
-			printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
-		done
-		echo; echo
-	done
-}
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
 
-[[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+# bashrc extensions
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+if [ -f ~/.extend.bashrc ]; then
+    source ~/.extend.bashrc
+fi
+if ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        source /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        source /etc/bash_completion
+    fi
+fi
 
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# undistract me
+if [ -d ~/bin/undistract-me ]; then
+    source /home/eugen/bin/undistract-me/long-running.bash
+    notify_when_long_running_commands_finish_install
+fi
+
+
+# PATH tweaks
 export GOPATH=~/.go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:'/home/eugen/.config/composer/vendor/bin'
 
+# aliases
 alias ll="ls -l"
+alias la='ls -alF'
 alias mc="mc -b"
 alias artisan="php artisan"
-alias dev-server="php -S localhost:8000"
-alias daleksay="cowsay -f dalek.cow"
+if [ -f ~/documents/dreamspace.sh ]; then
+    alias screenfetch="screenfetch -Na ~/documents/dreamspace.sh"
+fi
 
-#export PS1="[\[$(ppwd)\]\u@\h \W]$ "
+# set vim as default editor
+export VISUAL=`which vim`
+export EDITOR=`which vim`
 
-#export PATH='/home/eugen/bin/todo':$PATH
-#alias todo="/home/eugen/bin/todo/todo.sh"
-#complete -F _todo todo
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-#eval $(thefuck --alias)
-
-export VISUAL=vim
-
-export PATH=$PATH:'/home/eugen/.composer/vendor/bin'
-
-. /home/eugen/bin/undistract-me/long-running.bash && notify_when_long_running_commands_finish_install
-
+# custom bash prompt
+export PS1="[\u@\h \W]$ "
