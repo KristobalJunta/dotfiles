@@ -1,2 +1,3 @@
 - [ ] create makefile
 - [ ] ssh config
+- [ ] pycharm config
