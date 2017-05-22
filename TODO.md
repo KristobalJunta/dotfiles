@@ -1,0 +1,2 @@
+- [ ] create makefile
+- [ ] ssh config
