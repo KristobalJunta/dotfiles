@@ -1,3 +1,3 @@
 # dotfiles
 
-My own linux dotfiles repo
+dotfiles & configs repo
