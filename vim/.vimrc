@@ -1,3 +1,5 @@
+" ~/.vimrc by @KristobalJunta
+
 set number
 set ruler
 
@@ -43,4 +45,3 @@ set encoding=utf8
 set nobackup
 set nowb
 set noswapfile
-
