@@ -1,4 +1,12 @@
 "*":
+  "":
+    blade:
+      html:
+        php:
+          text:
+            editor:
+              commentEnd: " --}}"
+              commentStart: "{{-- "
   core:
     allowPendingPaneItems: false
     closeEmptyWindows: false
@@ -11,10 +19,12 @@
       ".git"
     ]
     projectHome: "/home/work/"
+    telemetryConsent: "limited"
   editor:
     backUpBeforeSaving: true
     fontSize: 15
     invisibles: {}
+    preferredLineLength: 100
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
@@ -23,12 +33,61 @@
     zoomFontWhenCtrlScrolling: false
   "exception-reporting":
     userId: "30538d73-46b5-06b0-1314-ac6f76f130fe"
+  "file-icons": {}
+  "file-types":
+    tpl: "text.html.php"
   "jscs-fixer":
     defaultPreset: "node-style-guide"
   linter: {}
+  "linter-php": {}
+  "linter-ui-default":
+    showPanel: true
   "markdown-preview": {}
   "markdown-preview-plus": {}
   minimap: {}
+  "node-debugger":
+    nodePath: "/usr/bin/node"
+  "php-debug":
+    PathMaps: [
+      "remotepath;localpath"
+      "/base/path/on/remote/system;C:\\base\\path\\on\\local\\system"
+    ]
+    ServerPort: 9000
+  "todo-manager":
+    ignoreNames: [
+      "**/node_modules/"
+      "**/vendor/"
+      "**/bower_components/"
+      "**/public/"
+    ]
+    ignoreThesePath: [
+      "**/node_modules/"
+      "**/vendor/"
+      "**/bower_components/"
+      "**/public/"
+    ]
+    regexes: [
+      {
+        regexName: "TODO"
+        regexString: "/\\b@?TODO:?\\s(.+$)/g"
+      }
+      {
+        regexName: "NOTE"
+        regexString: "/\\b@?NOTE:?\\s(.+$)/g"
+      }
+      {
+        regexName: "FIXME"
+        regexString: "/\\b@?FIXME:?\\s(.+$)/g"
+      }
+      {
+        regexName: "XXX"
+        regexString: "/\\b@?XXX:?\\s(.+$)/g"
+      }
+      {
+        regexName: "WTF"
+        regexString: "/\\b@?WTF:?\\s(.+$)/g"
+      }
+    ]
   "tree-view":
     hideVcsIgnoredFiles: true
   welcome:
@@ -37,9 +96,3 @@
   editor:
     commentEnd: " --}}"
     commentStart: "{{-- "
-"php-debug":
-  PathMaps: [
-    "remotepath;localpath"
-    "/base/path/on/remote/system;C:\\base\\path\\on\\local\\system"
-  ]
-  ServerPort: 9000
