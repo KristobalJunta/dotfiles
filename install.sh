@@ -46,7 +46,7 @@ install-atom() {
     local pkgType=$(test-system)
     local installFile="atom.$pkgType"
     echo "downloading $installFile"
-    wget -nv -o $installFile "atom.io/download/$pkgType"
+    wget -nv -O $installFile "atom.io/download/$pkgType"
     $pkgType -i $installFile
     rm $installFile
     apm install --package-file atom/packages.txt
