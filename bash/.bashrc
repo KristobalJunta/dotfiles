@@ -84,5 +84,9 @@ export EDITOR=`which vim`
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # custom bash prompt
-export PS1="[\u@\h \W]$ "
+# but dont replace it on Fedora, it's already nice there
+osname=`cat /etc/os-release | egrep ^NAME | cut -d '=' -f2 | sed -e "s/^\"//" -e "s/\"$//"`
+if [ ! $osname == 'Fedora' ]; then
+    export PS1="[\u@\h \W]$ "
+fi
 
