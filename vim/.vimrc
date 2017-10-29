@@ -10,7 +10,7 @@ set smartindent
 set tabstop=4
 set ai "Auto indent
 set si "Smart indent
-set paste
+set pastetoggle=<F10>
 
 " Files autorefresh
 set autoread
