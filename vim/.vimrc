@@ -10,6 +10,7 @@ set smartindent
 set tabstop=4
 set ai "Auto indent
 set si "Smart indent
+set paste
 
 " Files autorefresh
 set autoread
@@ -45,3 +46,4 @@ set encoding=utf8
 set nobackup
 set nowb
 set noswapfile
+
