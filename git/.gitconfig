@@ -9,7 +9,7 @@
 [alias]
 	co = checkout
 	br = branch
-	ci = commit
+	ci = commit -S
 	st = status
 	t = tag
 	deploy = push live master
