@@ -12,5 +12,8 @@
 	ci = commit
 	st = status
 	t = tag
+	deploy = push live master
 	unstage = reset HEAD --
 	all = add .
+[commit]
+	gpgsign = true
