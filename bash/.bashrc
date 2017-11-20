@@ -73,7 +73,9 @@ alias la='ls -alF'
 alias mc="mc -b"
 alias artisan="php artisan"
 if [ -f ~/documents/dreamspace.sh ]; then
-    alias screenfetch="screenfetch -Na ~/documents/dreamspace.sh"
+    alias screenfetch="screenfetch -a ~/documents/dreamspace.sh -D 'Dreamspace OS 17.10'"
+else
+    alias screenfetch="screenfetch -D 'Dreamspace OS 17.10'"
 fi
 
 # set vim as default editor
