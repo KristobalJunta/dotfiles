@@ -72,6 +72,7 @@ alias ll="ls -l"
 alias la='ls -alF'
 alias mc="mc -b"
 alias artisan="php artisan"
+alias vpn="sudo openvpn --config ~/keys/doamsterdam.ovpn"
 if [ -f ~/documents/dreamspace.sh ]; then
     alias screenfetch="screenfetch -a ~/documents/dreamspace.sh -D 'Dreamspace OS 17.10'"
 else
