@@ -43,12 +43,14 @@ copyFile() {
 # install functions
 
 install-atom() {
-    local pkgType=$(test-system)
-    local installFile="atom.$pkgType"
-    echo "downloading $installFile"
-    wget -nv -O $installFile "atom.io/download/$pkgType"
-    $pkgType -i $installFile
-    rm $installFile
+    if ! [ -x "$(command -v atom)" ]; then # install atom if it isn't present
+        local pkgType=$(test-system)
+        local installFile="atom.$pkgType"
+        echo "downloading $installFile"
+        wget -nv -O $installFile "atom.io/download/$pkgType"
+        $pkgType -i $installFile
+        rm $installFile
+    fi
     apm install --package-file atom/packages.txt
     copyFile "atom/config.cson" "~/.atom/config.cson"
     copyFile "atom/keymap.cson" "~/.atom/keymap.cson"
@@ -67,6 +69,4 @@ install-userdirs() {
 }
 
 # run it all
-
 main "$@"
-
