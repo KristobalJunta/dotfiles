@@ -1,0 +1,10 @@
+{
+    "telemetry.enableTelemetry": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.dragAndDrop": false,
+    "workbench.colorTheme": "One Dark Pro",
+    "blade.format.enable": true,
+    "workbench.startupEditor": "none"
+}
