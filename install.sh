@@ -9,6 +9,7 @@ main() {
     install-bash
     install-userdirs
     install-git
+    install-vscode
     echo 'done'
 }
 
@@ -51,6 +52,10 @@ install-git() {
 
 install-userdirs() {
     copyFile "user-dirs.dirs" "~/.config/user-dirs.dirs"
+}
+
+install-vscode() {
+    copyFile "vscode/settings.json" "~/.config/Code/User/settings.json"
 }
 
 # run it all

@@ -6,5 +6,16 @@
     "editor.dragAndDrop": false,
     "workbench.colorTheme": "One Dark Pro",
     "blade.format.enable": true,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "editor.fontSize": 16,
+    "explorer.openEditors.visible": 0,
+    "workbench.iconTheme": "ayu",
+    "explorer.confirmDelete": false,
+    "files.associations": {
+        "*.p": "gnuplot"
+    },
+    "extensions.ignoreRecommendations": false,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100
 }
