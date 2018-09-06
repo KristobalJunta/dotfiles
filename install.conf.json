@@ -1,0 +1,27 @@
+[
+  {
+    "defaults": {
+      "link": {
+        "relink": true,
+        "create": true
+      }
+    }
+  },
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.bashrc": "bash/bashrc",
+      "~/.gitconfig": "git/gitconfig",
+      "~/.vimrc": "vim/vimrc",
+      "~/.config/Code/User/settings.json": "vscode/settings.json",
+      "~/.config/user-dirs.dirs": "user-dirs.dirs"
+    }
+  },
+  {
+    "shell": [
+      ["git submodule update --init --recursive", "Installing submodules"]
+    ]
+  }
+]

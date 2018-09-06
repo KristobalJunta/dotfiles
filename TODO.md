@@ -1,2 +1,2 @@
-- [ ] add dotbot
+- [x] add dotbot
 - [ ] add intellij configs
