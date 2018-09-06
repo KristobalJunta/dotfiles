@@ -4,6 +4,7 @@
 [user]
 	name = Kristobal
 	email = junta.kristobal@gmail.com
+	signingkey = F16357590192038E
 [push]
 	default = simple
 [alias]
