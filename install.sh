@@ -9,7 +9,6 @@ main() {
     install-bash
     install-userdirs
     install-git
-    install-atom
     echo 'done'
 }
 
@@ -41,20 +40,6 @@ copyFile() {
 }
 
 # install functions
-
-install-atom() {
-    if ! [ -x "$(command -v atom)" ]; then # install atom if it isn't present
-        local pkgType=$(test-system)
-        local installFile="atom.$pkgType"
-        echo "downloading $installFile"
-        wget -nv -O $installFile "atom.io/download/$pkgType"
-        $pkgType -i $installFile
-        rm $installFile
-    fi
-    apm install --package-file atom/packages.txt
-    copyFile "atom/config.cson" "~/.atom/config.cson"
-    copyFile "atom/keymap.cson" "~/.atom/keymap.cson"
-}
 
 install-bash() {
     copyFile "bash/.bashrc" "~/.bashrc"
