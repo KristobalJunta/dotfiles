@@ -16,7 +16,7 @@
       "~/.gitconfig": "git/gitconfig",
       "~/.vimrc": "vim/vimrc",
       "~/.config/Code/User/settings.json": "vscode/settings.json",
-      "~/.config/user-dirs.dirs": "user-dirs.dirs"
+      "~/.config/user-dirs.dirs": "linux/user-dirs.dirs"
     }
   },
   {
