@@ -1,3 +1,2 @@
-- [ ] create makefile
-- [ ] ssh config
-- [ ] pycharm config
+- [ ] add dotbot
+- [ ] add intellij configs
