@@ -64,8 +64,8 @@ fi
 export GOPATH=~/.go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
-export PATH=$PATH:$HOME/bin
-export PATH=$PATH:'/home/eugen/.config/composer/vendor/bin'
+export PATH=$PATH:"$HOME/bin"
+export PATH=$PATH:"$HOME/.config/composer/vendor/bin"
 
 # aliases
 alias ll="ls -l"
