@@ -16,5 +16,6 @@
 	deploy = push live master
 	unstage = reset HEAD --
 	all = add .
+	l = log --oneline
 [commit]
 	gpgsign = true
