@@ -1,21 +1,26 @@
 {
-    "telemetry.enableTelemetry": false,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "editor.dragAndDrop": false,
-    "workbench.colorTheme": "One Dark Pro",
-    "blade.format.enable": true,
-    "workbench.startupEditor": "none",
-    "editor.fontSize": 16,
-    "explorer.openEditors.visible": 0,
-    "workbench.iconTheme": "ayu",
-    "explorer.confirmDelete": false,
-    "files.associations": {
-        "*.p": "gnuplot"
-    },
-    "extensions.ignoreRecommendations": false,
-    "files.trimTrailingWhitespace": true,
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 100
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.dragAndDrop": false,
+  "editor.fontSize": 16,
+
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "ayu",
+
+  "blade.format.enable": true,
+
+  "explorer.openEditors.visible": 0,
+  "explorer.confirmDelete": false,
+
+  "extensions.ignoreRecommendations": false,
+
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.p": "gnuplot"
+  }
 }
