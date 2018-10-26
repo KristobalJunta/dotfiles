@@ -4,7 +4,6 @@
 
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.dragAndDrop": false,
-  "editor.fontSize": 16,
 
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
