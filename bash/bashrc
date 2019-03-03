@@ -94,3 +94,21 @@ if [ ! $osname == 'Fedora' ]; then
 fi
 
 export LC_ALL=en_US.UTF-8
+
+# switch gitconfig file
+# requires file suffix as single argument
+# e.g.: "me" for "~/.gitconfig.me"
+gitcfg() {
+    local suf=$1
+    if [ -z "$suf" ]; then
+        $suf="me"
+    fi
+
+    fileName="$HOME/.gitconfig.$suf"
+    if [ -f $fileName ]; then
+        cp $fileName $HOME/.gitconfig
+        echo "switched gitconfig to \"$suf\""
+    else
+        echo "$fileName does not exist"
+    fi
+}
