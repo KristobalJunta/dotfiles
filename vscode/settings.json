@@ -20,6 +20,11 @@
 
   "files.trimTrailingWhitespace": true,
   "files.associations": {
-    "*.p": "gnuplot"
+    "*.p": "gnuplot",
+    "Vagrantfile": "ruby"
+  },
+  "python.pythonPath": "/usr/bin/python3",
+  "emmet.includeLanguages": {
+    "handlebars": "html"
   }
 }
