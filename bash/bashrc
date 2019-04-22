@@ -112,3 +112,7 @@ gitcfg() {
         echo "$fileName does not exist"
     fi
 }
+
+if [ ! -z `command -v pipenv` ]; then
+    eval "$(pipenv --completion)"185
+fi
