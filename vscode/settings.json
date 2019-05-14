@@ -1,15 +1,24 @@
 {
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.statusBar.feedback.visible": false,
 
+  "editor.detectIndentation": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.dragAndDrop": false,
+
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.maxColumn": 200,
+  "editor.minimap.showSlider": "always",
 
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.colorTheme": "One Dark Pro",
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "ayu",
+
+  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName} - Visual Studio Code",
 
   "blade.format.enable": true,
 
@@ -18,13 +27,89 @@
 
   "extensions.ignoreRecommendations": false,
 
+  "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.associations": {
     "*.p": "gnuplot",
-    "Vagrantfile": "ruby"
+    "Vagrantfile": "ruby",
+    "*.jl": "json"
   },
-  "python.pythonPath": "/usr/bin/python3",
+
+  "trailing-spaces.syntaxIgnore": ["markdown"],
+
+  "python.pythonPath": "C:\\Program Files\\Python37\\python.exe",
+  "python.linting.pylintEnabled": false,
+  "python.linting.enabled": true,
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}\\src"
+  ],
+
   "emmet.includeLanguages": {
     "handlebars": "html"
-  }
+  },
+
+  "[html]": {
+    "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[vue]": {},
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+
+  "peacock.favoriteColors": [
+    {
+      "name": "Angular Red",
+      "value": "#b52e31"
+    },
+    {
+      "name": "Auth0 Orange",
+      "value": "#eb5424"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "C# Purple",
+      "value": "#68217A"
+    },
+    {
+      "name": "Gatsby Purple",
+      "value": "#639"
+    },
+    {
+      "name": "Java Blue-Gray",
+      "value": "#557c9b"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#00b3e6"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#42b883"
+    }
+  ]
 }
