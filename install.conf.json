@@ -3,7 +3,8 @@
     "defaults": {
       "link": {
         "relink": true,
-        "create": true
+        "create": true,
+        "glob": true
       }
     }
   },
@@ -17,6 +18,7 @@
       "~/.gitconfig": "git/gitconfig",
       "~/.vimrc": "vim/vimrc",
       "~/.config/VSCodium/User/settings.json": "vscode/settings.json",
+      "~/.config/VSCodium/User/snippets/": "vscode/snippets/*",
       "~/.config/user-dirs.dirs": "linux/user-dirs.dirs"
     }
   },
