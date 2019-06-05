@@ -28,6 +28,7 @@ shanoor.vscode-nginx
 shardulm94.trailing-spaces
 sidneys1.gitconfig
 teabyii.ayu
+tomoki1207.selectline-statusbar
 vayan.haml
 wayou.vscode-todo-highlight
 yzhang.markdown-all-in-one
