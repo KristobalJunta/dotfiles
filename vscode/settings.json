@@ -32,7 +32,8 @@
   "files.associations": {
     "*.p": "gnuplot",
     "Vagrantfile": "ruby",
-    "*.jl": "json"
+    "*.jl": "json",
+    ".style.yapf": "ini"
   },
 
   "trailing-spaces.syntaxIgnore": ["markdown"],
