@@ -116,6 +116,10 @@
       "value": "#42b883"
     }
   ],
+
+  "peacock.affectStatusBar": false,
+  "peacock.affectActivityBar": false,
+
   "window.zoomLevel": 0,
   "todohighlight.isEnable": true,
   "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe"
