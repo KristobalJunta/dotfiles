@@ -18,7 +18,7 @@
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "ayu",
 
-  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName} - Visual Studio Code",
+  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}Visual Studio Code",
 
   "blade.format.enable": true,
 
@@ -84,6 +84,10 @@
       "value": "#639"
     },
     {
+      "name": "Go Cyan",
+      "value": "#5dc9e2"
+    },
+    {
       "name": "Java Blue-Gray",
       "value": "#557c9b"
     },
@@ -111,5 +115,8 @@
       "name": "Vue Green",
       "value": "#42b883"
     }
-  ]
+  ],
+  "window.zoomLevel": 0,
+  "todohighlight.isEnable": true,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe"
 }
