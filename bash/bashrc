@@ -112,3 +112,6 @@ gitcfg() {
         echo "$fileName does not exist"
     fi
 }
+
+
+alias 🐍="python3"
