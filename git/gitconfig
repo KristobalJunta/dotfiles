@@ -1,10 +1,12 @@
 # ~/.gitconfig
 # by @KristobalJunta
 
-[user]
-	name = Kristobal
-	email = junta.kristobal@gmail.com
-	signingkey = F16357590192038E
+[include]
+  path = ~/.gitconfig.me
+[includeIf "gitdir:~/work/bwt/"]
+  path = ~/.gitconfig.bwt
+[includeIf "gitdir:~/varya/"]
+  path = ~/.gitconfig.varya
 [push]
 	default = simple
 [alias]
