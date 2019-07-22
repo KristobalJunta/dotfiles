@@ -113,5 +113,8 @@ gitcfg() {
     fi
 }
 
-
 alias 🐍="python3"
+
+if [ ! -z `command -v pipenv` ]; then
+    eval "$(pipenv --completion)"185
+fi
