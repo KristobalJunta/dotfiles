@@ -12,6 +12,22 @@
     "clean": ["~"]
   },
   {
+    "shell": [
+      ["git submodule update --init --recursive", "Installing submodules"],
+
+      ["mkdir -p ~/bin"],
+      ["mkdir -p ~/desktop"],
+      ["mkdir -p ~/documents"],
+      ["mkdir -p ~/downloads"],
+      ["mkdir -p ~/music"],
+      ["mkdir -p ~/pictures"],
+      ["mkdir -p ~/public"],
+      ["mkdir -p ~/templates"],
+      ["mkdir -p ~/videos"],
+      ["mkdir -p ~/work"]
+    ]
+  },
+  {
     "link": {
       "~/.bashrc": "bash/bashrc",
       "~/.editorconfig": "editorconfig/editorconfig",
@@ -19,10 +35,5 @@
       "~/.vimrc": "vim/vimrc",
       "~/.config/user-dirs.dirs": "linux/user-dirs.dirs"
     }
-  },
-  {
-    "shell": [
-      ["git submodule update --init --recursive", "Installing submodules"]
-    ]
   }
 ]
