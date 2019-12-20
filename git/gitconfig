@@ -1,23 +1,19 @@
 # ~/.gitconfig
 # by @KristobalJunta
 
-[include]
-  path = ~/.gitconfig.me
-[includeIf "gitdir:~/work/bwt/"]
-  path = ~/.gitconfig.bwt
-[includeIf "gitdir:~/varya/"]
-  path = ~/.gitconfig.varya
 [push]
 	default = simple
 [alias]
 	co = checkout
 	br = branch
-	ci = commit -S
+	ci = commit
 	st = status
 	t = tag
-	deploy = push live master
 	unstage = reset HEAD --
 	all = add .
 	l = log --oneline
-[commit]
-	gpgsign = true
+[user]
+	name = KristobalJunta
+	email = junta.kristobal@gmail.com
+[include]
+    path = ~/.gitconfig.user
