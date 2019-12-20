@@ -156,4 +156,5 @@ if [ ! -z `command -v pipenv` ]; then
 fi
 
 export LESS="-SRXF"
+which pipenv > /dev/null && eval "$(pipenv --completion)"
 
