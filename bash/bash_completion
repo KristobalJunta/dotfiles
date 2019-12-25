@@ -1,0 +1,8 @@
+# ~/.bash_completion
+# by @KristobalJunta
+
+shopt -s nullglob
+
+for f in ~/.bash_completion.d/*; do
+  [ -f "$f" ] && . "$f"
+done
