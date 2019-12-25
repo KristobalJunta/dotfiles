@@ -24,14 +24,14 @@
       ["mkdir -p ~/public"],
       ["mkdir -p ~/templates"],
       ["mkdir -p ~/videos"],
-      ["mkdir -p ~/work"],
-      ["mkdir -p ~/.bash_completion.d"]
+      ["mkdir -p ~/work"]
     ]
   },
   {
     "link": {
       "~/.bashrc": "bash/bashrc",
       "~/.bash_completion": "bash/bash_completion",
+      "~/.bash_completion.d": "bash/bash_completion.d",
       "~/.editorconfig": "editorconfig/editorconfig",
       "~/.gitconfig": "git/gitconfig",
       "~/.vimrc": "vim/vimrc",
