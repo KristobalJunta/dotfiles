@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
+"""
+All directories in lists must be specified as relative paths
+from user $HOME
+"""
+
 import os
+from os.path import join, expanduser
+
 
 dirs = [
     'bin',
@@ -20,22 +27,27 @@ delete_dirs = [
     'Templates',
 ]
 
+
 def create_dir(userdir: str) -> bool:
-    if os.path.isdir(userdir):
+    dirpath = join(expanduser('~'), userdir)
+
+    if os.path.isdir(dirpath):
         return True
     else:
-        if os.path.exists(userdir):
-            print(f"{userdir} already exists and is not a directory")
+        if os.path.exists(dirpath):
+            print(f"{dirpath} already exists and is not a directory")
             return False
         else:
-            os.makedirs(userdir)
+            os.makedirs(dirpath)
             return True
 
-    if os.path.isdir(userdir.capitalize()):
-        os.rename(userdir.capitalize(), userdir)
+    cap_dirpath = join(expanduser('~'), userdir.capitalize())
+    if os.path.isdir(cap_dirpath):
+        os.rename(cap_dirpath, dirpath)
         return True
 
     return False
+
 
 for userdir in dirs:
     result = create_dir(userdir)
