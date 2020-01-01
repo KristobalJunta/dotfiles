@@ -38,13 +38,13 @@ def create_dir(userdir: str) -> bool:
             print(f"{dirpath} already exists and is not a directory")
             return False
         else:
-            os.makedirs(dirpath)
-            return True
+            cap_dirpath = join(expanduser('~'), userdir.capitalize())
+            if os.path.isdir(cap_dirpath):
+                os.rename(cap_dirpath, dirpath)
+            else:
+                os.makedirs(dirpath)
 
-    cap_dirpath = join(expanduser('~'), userdir.capitalize())
-    if os.path.isdir(cap_dirpath):
-        os.rename(cap_dirpath, dirpath)
-        return True
+            return True
 
     return False
 
@@ -57,6 +57,7 @@ for userdir in dirs:
         print(f"{userdir} creation failed")
 
 for userdir in delete_dirs:
+    userdir = join(expanduser('~'), userdir)
     try:
         os.rmdir(userdir)
     except FileNotFoundError:
