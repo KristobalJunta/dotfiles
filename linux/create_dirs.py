@@ -8,11 +8,16 @@ dirs = [
     'downloads',
     'music',
     'pictures',
-    'public',
+    '.public',
     'Sync',
-    'templates',
+    '.templates',
     'videos',
     'work',
+]
+
+delete_dirs = [
+    'Public',
+    'Templates',
 ]
 
 def create_dir(userdir: str) -> bool:
@@ -38,3 +43,11 @@ for userdir in dirs:
         print(f"{userdir} created successfully")
     else:
         print(f"{userdir} creation failed")
+
+for userdir in delete_dirs:
+    try:
+        os.rmdir(userdir)
+    except FileNotFoundError:
+        print(f"{userdir} does not exist, skipping deletion")
+    except OSError:
+        print(f"{userdir} is not empty, skipping deletion")
