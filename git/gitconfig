@@ -12,9 +12,6 @@
 	unstage = reset HEAD --
 	all = add .
 	l = log --oneline
-[user]
-	name = KristobalJunta
-	email = junta.kristobal@gmail.com
 [include]
     path = ~/.gitconfig.user
 [core]
