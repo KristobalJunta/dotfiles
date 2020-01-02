@@ -17,3 +17,5 @@
 	email = junta.kristobal@gmail.com
 [include]
     path = ~/.gitconfig.user
+[core]
+	autocrlf = input
