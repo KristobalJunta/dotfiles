@@ -26,7 +26,8 @@
       "~/.gitconfig": "git/gitconfig",
       "~/.vimrc": "vim/vimrc",
       "~/.config/user-dirs.dirs": "linux/user-dirs.dirs",
-      "~/.local/share/kxmlgui5/dolphin/dolphinui.rc": "kde/dolphinui.rc"
+      "~/.local/share/kxmlgui5/dolphin/dolphinui.rc": "kde/dolphinui.rc",
+      "~/.config/kglobalshortcutsrc": "kde/kglobalshortcutsrc"
     }
   }
 ]
