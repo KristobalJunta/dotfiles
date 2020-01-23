@@ -20,6 +20,7 @@
   {
     "link": {
       "~/.bashrc": "bash/bashrc",
+      "~/.profile": "bash/profile",
       "~/.bash_completion": "bash/bash_completion",
       "~/.bash_completion.d": "bash/bash_completion.d",
       "~/.editorconfig": "editorconfig/editorconfig",
