@@ -1,5 +1,5 @@
 [Desktop Entry]
-DefaultProfile=bash.profile
+DefaultProfile=bash-laptop.profile
 
 [DownloadDialog Settings]
 Height 1080=494
@@ -12,7 +12,7 @@ Favorites=
 SaveGeometryOnExit=false
 
 [MainWindow]
-State=AAAA/wAAAAD9AAAAAAAAAz4AAAGiAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAA0gAAAG6AAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 
 [TabBar]

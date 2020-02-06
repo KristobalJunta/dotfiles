@@ -153,9 +153,16 @@ gitcfg() {
 alias 🐍="python3"
 
 if [ ! -z `command -v pipenv` ]; then
-    eval "$(pipenv --completion)"185
+    eval "$(pipenv --completion)"
 fi
 
 export LESS="-SRXF"
 which pipenv > /dev/null && eval "$(pipenv --completion)"
 
+rdos2unix () {
+    find "$1" -type f -print0 | xargs -0 dos2unix
+}
+
+if [ ! -z `command -v pipenv` ]; then
+    eval "$(starship init bash)"
+fi
