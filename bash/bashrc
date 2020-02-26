@@ -163,6 +163,10 @@ rdos2unix () {
     find "$1" -type f -print0 | xargs -0 dos2unix
 }
 
-if [ ! -z `command -v pipenv` ]; then
+if [ ! -z `command -v starship` ]; then
     eval "$(starship init bash)"
+fi
+
+if [ ! -z `command -v thefuck` ]; then
+    eval $(thefuck --alias)
 fi
