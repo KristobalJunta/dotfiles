@@ -14,7 +14,8 @@
   {
     "shell": [
       ["git submodule update --init --recursive", "Installing submodules"],
-      ["python3 linux/create_dirs.py", "Creating user directories"]
+      ["python3 linux/create_dirs.py", "Creating user directories"],
+      ["bash starship/install_starship.toml", "Installing starship.rs command prompt"]
     ]
   },
   {
@@ -30,7 +31,7 @@
 
       "~/.config/user-dirs.dirs": "linux/user-dirs.dirs",
 
-      "~/.config/starship.toml": "starship.toml",
+      "~/.config/starship.toml": "starship/starship.toml",
 
       "~/.local/share/kxmlgui5/dolphin/dolphinui.rc": "kde/dolphinui.rc",
       "~/.config/kglobalshortcutsrc": "kde/kglobalshortcutsrc",
