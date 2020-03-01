@@ -14,7 +14,8 @@
   {
     "shell": [
       ["git submodule update --init --recursive", "Installing submodules"],
-      ["python3 linux/create_dirs.py", "Creating user directories"]
+      ["python3 linux/create_dirs.py", "Creating user directories"],
+      ["bash starship/install_starship.toml", "Installing starship.rs command prompt"]
     ]
   },
   {
@@ -23,18 +24,19 @@
       "~/.profile": "bash/profile",
       "~/.bash_completion": "bash/bash_completion",
       "~/.bash_completion.d": "bash/bash_completion.d",
+
       "~/.editorconfig": "editorconfig/editorconfig",
       "~/.gitconfig": "git/gitconfig",
       "~/.vimrc": "vim/vimrc",
+
       "~/.config/user-dirs.dirs": "linux/user-dirs.dirs",
+
+      "~/.config/starship.toml": "starship/starship.toml",
+
       "~/.local/share/kxmlgui5/dolphin/dolphinui.rc": "kde/dolphinui.rc",
       "~/.config/kglobalshortcutsrc": "kde/kglobalshortcutsrc",
-      "~/.config/konsolerc": "kde/konsole/konsolerc",
       "~/.local/share/kxmlgui5/konsole/konsoleui.rc": "kde/konsole/konsoleui.rc",
-      "~/.local/share/kxmlgui5/konsole/sessionui.rc": "kde/konsole/sessionui.rc",
-      "~/.local/share/konsole/bash.profile": "kde/konsole/bash.profile",
-      "~/.local/share/konsole/bash-laptop.profile": "kde/konsole/bash-laptop.profile",
-      "~/.config/starship.toml": "starship.toml"
+      "~/.local/share/kxmlgui5/konsole/sessionui.rc": "kde/konsole/sessionui.rc"
     }
   }
 ]

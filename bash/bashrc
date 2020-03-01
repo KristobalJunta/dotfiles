@@ -166,3 +166,7 @@ rdos2unix () {
 if [ ! -z `command -v starship` ]; then
     eval "$(starship init bash)"
 fi
+
+if [ ! -z `command -v thefuck` ]; then
+    eval $(thefuck --alias)
+fi
