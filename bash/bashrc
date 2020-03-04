@@ -170,3 +170,7 @@ fi
 if [ ! -z `command -v thefuck` ]; then
     eval $(thefuck --alias)
 fi
+
+alias blyad=fuck
+
+export PIPENV_VENV_IN_PROJECT=1
