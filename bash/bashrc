@@ -27,65 +27,36 @@ shopt -s checkwinsize
 
 # bashrc extensions
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+  source ~/.bash_aliases
 fi
-if [ -f ~/.extend.bashrc ]; then
-    source ~/.extend.bashrc
+
+# load env tweaks
+if [ -f ~/.bash_env ]; then
+  source ~/.bash_env
 fi
+
 if ! shopt -oq posix; then
-    if [ -f /usr/share/bash-completion/bash_completion ]; then
-        source /usr/share/bash-completion/bash_completion
-    elif [ -f /etc/bash_completion ]; then
-        source /etc/bash_completion
-    fi
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    source /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    source /etc/bash_completion
+  fi
 fi
 
-# enable color support of ls and also add handy aliases
+# enable color support
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# undistract me
-if [ -d ~/bin/undistract-me ]; then
-    source /home/eugen/bin/undistract-me/long-running.bash
-    notify_when_long_running_commands_finish_install
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 fi
 
 # PATH tweaks
-export GOPATH=~/.go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
 export PATH=$PATH:"$HOME/bin"
 export PATH=$PATH:"$HOME/.config/composer/vendor/bin"
 export PATH=$PATH:"$HOME/.local/bin"
 export PATH=$PATH:"/usr/local/cuda-10.0/bin"
-export CUDADIR="/usr/local/cuda-10.0"
-
-# aliases
-alias ll="ls -l"
-alias la='ls -alF'
-alias mc="mc -b"
-alias artisan="php artisan"
-alias code="codium"
-if [ -f ~/documents/dreamspace.sh ]; then
-    alias screenfetch="screenfetch -a ~/documents/dreamspace.sh -D 'Dreamspace OS 17.10'"
-else
-    alias screenfetch="screenfetch -D 'Dreamspace OS 17.10'"
-fi
-
-# set vim as default editor
-export VISUAL=`which vim`
-export EDITOR=`which vim`
-
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # custom bash prompt
 # set variable identifying the chroot you work in (used in the prompt below)
@@ -95,82 +66,31 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+  xterm-color|*-256color) color_prompt=yes;;
 esac
-
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
-
-if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \$(__git_ps1 '(%s)')\n\$ "
-else
-    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w \$(__git_ps1 '(%s)')\n\$ "
-fi
-unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
+  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+  ;;
 *)
-    ;;
+  ;;
 esac
 
-export LC_ALL=en_US.UTF-8
-
-# switch gitconfig file
-# requires file suffix as single argument
-# e.g.: "me" for "~/.gitconfig.me"
-gitcfg() {
-    local suf=$1
-    if [ -z "$suf" ]; then
-        $suf="me"
-    fi
-
-    fileName="$HOME/.gitconfig.$suf"
-    if [ -f $fileName ]; then
-        cp $fileName $HOME/.gitconfig
-        echo "switched gitconfig to \"$suf\""
-    else
-        echo "$fileName does not exist"
-    fi
-}
-
-alias 🐍="python3"
-
-if [ ! -z `command -v pipenv` ]; then
-    eval "$(pipenv --completion)"
-fi
-
-export LESS="-SRXF"
-which pipenv > /dev/null && eval "$(pipenv --completion)"
-
+# custom bash functions
 rdos2unix () {
-    find "$1" -type f -print0 | xargs -0 dos2unix
+  find "$1" -type f -print0 | xargs -0 dos2unix
 }
 
-if [ ! -z `command -v starship` ]; then
-    eval "$(starship init bash)"
+# eval package-specific bash add-ons
+if [ ! -z `command -v pipenv` ]; then eval "$(pipenv --completion)"; fi
+if [ ! -z `command -v starship` ]; then eval "$(starship init bash)"; fi
+if [ ! -z `command -v thefuck` ]; then eval "$(thefuck --alias)"; fi
+
+# undistract me
+if [ -d ~/bin/undistract-me ]; then
+    source /home/eugen/bin/undistract-me/long-running.bash
+    notify_when_long_running_commands_finish_install
 fi
 
-if [ ! -z `command -v thefuck` ]; then
-    eval $(thefuck --alias)
-fi
-
-alias blyad=fuck
-
-export PIPENV_VENV_IN_PROJECT=1
