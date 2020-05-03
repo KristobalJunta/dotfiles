@@ -27,11 +27,11 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=KDE Daemon
-{00669287-1df1-4c9b-83be-697a399d0940}=,none,Take Full Screen Screenshot
-{42d1e795-ce7d-4e73-b314-60e22237b42c}=,none,Take Active Window Screenshot
-{4cd0f652-4b7f-4cfe-9727-2e4658a1e3af}=Shift+Print,none,Take Rectangular Region Screenshot
-{a5b3a747-3d01-4271-8794-31391e2d1bb6}=none,none,Start Screenshot Tool
-{b24d0d99-5011-4edf-b93a-ba7b837804ff}=,none,Launch Konsole
+{4268b7ad-23d9-4144-9e29-9d8835100e37}=Ctrl+Alt+T,none,Launch Konsole
+{61833edd-23d1-4ead-84ff-cd6a87a13b85}=Print,none,Take Full Screen Screenshot
+{6675deaf-079f-4865-8cb4-eb7341232dd1}=Ctrl+Shift+Print,none,Take Rectangular Region Screenshot
+{85495406-a757-4489-9c43-18b1fc33e9da}=none,none,Start Screenshot Tool
+{8f07050b-5c4a-4e3b-aa7e-cf854cb30cf5}=Meta+Print,none,Take Active Window Screenshot
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
 
 [kmix]
@@ -288,6 +288,7 @@ activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 26=none,none,Activate Digital Clock Widget
 activate widget 28=Meta+D,none,Activate Minimize all Windows Widget
+activate widget 3=Alt+F1,none,Activate Application Launcher Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item

@@ -1,0 +1,14 @@
+# set vim as default editor
+export VISUAL=`which vim`
+export EDITOR=`which vim`
+
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+export PIPENV_VENV_IN_PROJECT=1
+export PIPENV_DONT_LOAD_ENV=1
+export POETRY_VIRTUALENVS_IN_PROJECT=1
+
+export LC_ALL=en_US.UTF-8
+
+export LESS="-SRXF"
