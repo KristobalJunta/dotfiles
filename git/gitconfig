@@ -2,17 +2,20 @@
 # by @KristobalJunta
 
 [push]
-	default = simple
+  default = simple
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	t = tag
-	unstage = reset HEAD --
-	all = add .
-	l = log --oneline
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  t = tag
+  unstage = reset HEAD --
+  all = add .
+  l = log --oneline
 [include]
     path = ~/.gitconfig.user
 [core]
-	autocrlf = input
+  autocrlf = input
+  pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
+[interactive]
+  diffFilter = delta --color-only
