@@ -14,6 +14,7 @@
   {
     "shell": [
       ["git submodule update --init --recursive", "Installing submodules"],
+      ["bash python/install.sh", "Installing global Python packages"],
       ["python3 linux/create_dirs.py", "Creating user directories"],
       ["bash starship/install_starship.sh", "Installing starship.rs command prompt"],
       ["cp bash/bash_env ~/.bash_env", "Copy bash env file without overwriting"]
