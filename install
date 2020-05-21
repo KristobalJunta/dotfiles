@@ -2,9 +2,8 @@
 
 set -e
 
-CONFIG="install.conf.json"
+CONFIG="install.conf.yaml"
 DOTBOT_BIN="dotbot"
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 python3 -m pip install --upgrade --user dotbot
 cd "${BASEDIR}"
