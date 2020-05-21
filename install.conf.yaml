@@ -24,16 +24,8 @@
   "~/.bash_completion": bash/bash_completion
   "~/.bash_completion.d": bash/bash_completion.d
   "~/.bash_aliases": bash/bash_aliases
-
   "~/.editorconfig": editorconfig/editorconfig
   "~/.gitconfig": git/gitconfig
   "~/.vimrc": vim/vimrc
-
   "~/.config/user-dirs.dirs": linux/user-dirs.dirs
-
   "~/.config/starship.toml": starship/starship.toml
-
-  "~/.local/share/kxmlgui5/dolphin/dolphinui.rc": kde/dolphinui.rc
-  "~/.config/kglobalshortcutsrc": kde/kglobalshortcutsrc
-  "~/.local/share/kxmlgui5/konsole/konsoleui.rc": kde/konsole/konsoleui.rc
-  "~/.local/share/kxmlgui5/konsole/sessionui.rc": kde/konsole/sessionui.rc
