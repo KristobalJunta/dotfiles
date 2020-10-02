@@ -1,4 +1,2 @@
 alias mc="mc -b"
-alias artisan="php artisan"
-alias code="codium"
-alias blyad=fuck
+
