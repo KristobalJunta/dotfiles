@@ -1,10 +1,10 @@
 ---
 - defaults:
-  link:
-    relink: true
-    force: true
-    create: true
-    glob: true
+    link:
+      relink: true
+      force: true
+      create: true
+      glob: true
 - clean:
   - "~"
 - shell:
@@ -19,13 +19,13 @@
   - - cp bash/bash_env ~/.bash_env
     - Copy bash env file without overwriting
 - link:
-  "~/.bashrc": bash/bashrc
-  "~/.profile": bash/profile
-  "~/.bash_completion": bash/bash_completion
-  "~/.bash_completion.d": bash/bash_completion.d
-  "~/.bash_aliases": bash/bash_aliases
-  "~/.editorconfig": editorconfig/editorconfig
-  "~/.gitconfig": git/gitconfig
-  "~/.vimrc": vim/vimrc
-  "~/.config/user-dirs.dirs": linux/user-dirs.dirs
-  "~/.config/starship.toml": starship/starship.toml
+    "~/.bashrc": bash/bashrc
+    "~/.profile": bash/profile
+    "~/.bash_completion": bash/bash_completion
+    "~/.bash_completion.d": bash/bash_completion.d
+    "~/.bash_aliases": bash/bash_aliases
+    "~/.editorconfig": editorconfig/editorconfig
+    "~/.gitconfig": git/gitconfig
+    "~/.vimrc": vim/vimrc
+    "~/.config/user-dirs.dirs": linux/user-dirs.dirs
+    "~/.config/starship.toml": starship/starship.toml
