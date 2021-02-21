@@ -1,0 +1,4 @@
+{
+    "imagesFormat": "table {{.ID}}  {{.Repository}}\t{{.Tag}}\t{{.CreatedSince}}\t{{.Size}}",
+    "psFormat":     "table {{.ID}}  {{.Names}}\t{{.Image}}\t{{.Command}}\t{{.Status}}"
+}
