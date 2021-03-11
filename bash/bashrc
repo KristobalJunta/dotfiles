@@ -1,10 +1,7 @@
-# ~/.bashrc
-# by @KristobalJunta
-
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+  *i*) ;;
+    *) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -25,16 +22,6 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# bashrc extensions
-if [ -f ~/.bash_aliases ]; then
-  source ~/.bash_aliases
-fi
-
-# load env tweaks
-if [ -f ~/.bash_env ]; then
-  source ~/.bash_env
-fi
-
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     source /usr/share/bash-completion/bash_completion
@@ -52,47 +39,14 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
-# PATH tweaks
-export PATH=$PATH:"$HOME/bin"
-export PATH=$PATH:"$HOME/.config/composer/vendor/bin"
-export PATH=$PATH:"$HOME/.local/bin"
-export PATH=$PATH:"/usr/local/cuda-10.0/bin"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# custom bash prompt
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-  xterm-color|*-256color) color_prompt=yes;;
-esac
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-  ;;
-*)
-  ;;
-esac
-
 # custom bash functions
 rdos2unix () {
   find "$1" -type f -print0 | xargs -0 dos2unix
 }
 
-# eval package-specific bash add-ons
-if [ ! -z `command -v pipenv` ]; then eval "$(pipenv --completion)"; fi
-if [ ! -z `command -v starship` ]; then eval "$(starship init bash)"; fi
-if [ ! -z `command -v thefuck` ]; then eval "$(thefuck --alias)"; fi
-
-# undistract me
-if [ -d ~/bin/undistract-me ]; then
-    source /home/eugen/bin/undistract-me/long-running.bash
-    notify_when_long_running_commands_finish_install
+if [ -n "$(command -v starship)" ]; then
+  eval "$(starship init bash)"
 fi
 
+# aliases
+alias mc="mc -b"
