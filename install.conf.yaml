@@ -23,9 +23,9 @@
     "~/.profile": bash/profile
     "~/.bash_completion": bash/bash_completion
     "~/.bash_completion.d": bash/bash_completion.d
-    "~/.bash_aliases": bash/bash_aliases
-    "~/.editorconfig": editorconfig/editorconfig
-    "~/.gitconfig": git/gitconfig
-    "~/.vimrc": vim/vimrc
+    "~/.editorconfig": editorconfig
+    "~/.gitconfig": gitconfig
+    "~/.vimrc": vimrc
     "~/.config/user-dirs.dirs": linux/user-dirs.dirs
     "~/.config/starship.toml": starship/starship.toml
+    "~/.docker/config.json": docker/config.json
