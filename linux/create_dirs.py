@@ -27,37 +27,34 @@ delete_dirs = [
     'Templates',
 ]
 
+homedir = expanduser('~')
+
 
 def create_dir(userdir: str) -> bool:
-    dirpath = join(expanduser('~'), userdir)
+    dirpath = join(homedir, userdir)
 
     if os.path.isdir(dirpath):
-        return True
+        return
+    elif os.path.exists(dirpath):
+        raise Exception(f"{dirpath} already exists and is not a directory")
     else:
-        if os.path.exists(dirpath):
-            print(f"{dirpath} already exists and is not a directory")
-            return False
+        cap_dirpath = join(homedir, userdir.capitalize())
+        if os.path.isdir(cap_dirpath):
+            os.rename(cap_dirpath, dirpath)
         else:
-            cap_dirpath = join(expanduser('~'), userdir.capitalize())
-            if os.path.isdir(cap_dirpath):
-                os.rename(cap_dirpath, dirpath)
-            else:
-                os.makedirs(dirpath)
-
-            return True
-
-    return False
+            os.makedirs(dirpath)
 
 
 for userdir in dirs:
-    result = create_dir(userdir)
-    if result:
-        print(f"{userdir} created successfully")
+    try:
+        create_dir(userdir)
+    except Exception as err:
+        print(f"{userdir} creation failed: {err}")
     else:
-        print(f"{userdir} creation failed")
+        print(f"{userdir} created successfully")
 
 for userdir in delete_dirs:
-    userdir = join(expanduser('~'), userdir)
+    userdir = join(homedir, userdir)
     try:
         os.rmdir(userdir)
     except FileNotFoundError:

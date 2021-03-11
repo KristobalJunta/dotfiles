@@ -1,4 +1,0 @@
-ppa:phoerious/keepassxc
-ppa:deadsnakes/ppa
-ppa:nathan-renniewaldock/flux
-ppa:phoerious/keepassxc
