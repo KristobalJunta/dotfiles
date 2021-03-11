@@ -9,8 +9,7 @@ mitmproxy
 mycli
 notebook
 pgcli
-pipenv
-poetry
 pylint
 pytest
 yapf
+youtube-dl
