@@ -29,3 +29,4 @@
     "~/.config/user-dirs.dirs": linux/user-dirs.dirs
     "~/.config/starship.toml": starship/starship.toml
     "~/.docker/config.json": docker/config.json
+    "~/.ssh/config": ssh_config
