@@ -55,3 +55,11 @@ fi
 
 # aliases
 alias mc="mc -b"
+
+# set vim as default editor
+export VISUAL=`which vim`
+export EDITOR=`which vim`
+
+export LC_ALL=en_US.UTF-8
+
+export LESS="-SRXF"

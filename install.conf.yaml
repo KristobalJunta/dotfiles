@@ -16,8 +16,6 @@
     - Creating user directories
   - - bash starship/install_starship.sh
     - Installing starship.rs command prompt
-  - - cp bash/bash_env ~/.bash_env
-    - Copy bash env file without overwriting
 - link:
     "~/.bashrc": bash/bashrc
     "~/.profile": bash/profile

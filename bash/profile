@@ -14,7 +14,8 @@ PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.poetry/bin:$PATH"
 
-# env tweaks
-if [ -f ~/.bash_env ]; then
-  source "$HOME/.bash_env"
-fi
+GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+PIPENV_VENV_IN_PROJECT=1
+PIPENV_DONT_LOAD_ENV=1
+POETRY_VIRTUALENVS_IN_PROJECT=1
