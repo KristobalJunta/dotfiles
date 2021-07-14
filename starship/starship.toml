@@ -1,4 +1,5 @@
 add_newline = false
+
 format = """\
     $username\
     $hostname\
@@ -25,3 +26,16 @@ ssh_only = false
 
 [username]
 show_always = true
+format = "[$user]($style) at "
+
+[package]
+disabled = true
+
+[python]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+[git_branch]
+format = "on [$branch]($style) "
