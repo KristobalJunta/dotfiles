@@ -11,11 +11,13 @@
 	st = status
 	t = tag
 	unstage = reset HEAD --
-	all = add .
-	l = log --oneline
+	rb = rebase
+	sw = switch
+	git = !git
 
 [core]
-	autocrlf = input
+	autocrlf = true
+	safecrlf = false
 	pager = delta
 
 [interactive]
@@ -31,3 +33,9 @@
 
 [include]
 	path = ~/.gitconfig.user
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
