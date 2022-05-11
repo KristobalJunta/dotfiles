@@ -47,4 +47,3 @@ set encoding=utf8
 set nobackup
 set nowb
 set noswapfile
-
