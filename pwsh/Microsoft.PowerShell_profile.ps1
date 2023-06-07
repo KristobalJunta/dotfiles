@@ -4,4 +4,12 @@ Set-Alias -Name vim -Value 'C:\Program Files\Git\usr\bin\vim'
 
 clear
 
-oh-my-posh init pwsh --config ~\AppData\Local\Programs\oh-my-posh\themes\kristobaljunta.omp.json | Invoke-Expression
+Switch (( get-date ).DayOfWeek)
+{
+    'Wednesday' { $env:PROMPT_EMOJI = '🐸🐸🐸' }
+    'Thursday'  { $env:PROMPT_EMOJI = '🐟🐟🐟' }
+    'Friday'    { $env:PROMPT_EMOJI = '🍺🍺🍺' }
+    default     { $env:PROMPT_EMOJI = '🚀🚀🚀' }
+}
+
+oh-my-posh init pwsh --config ~\Documents\PowerShell\kristobaljunta_compact.omp.json | Invoke-Expression
