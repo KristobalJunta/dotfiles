@@ -1,15 +1,22 @@
+# database tools
+litecli
+mycli
+pgcli
+
+# dev tools
 awscli
 black
-csvkit
 flake8
 ipython
 isort
-litecli
-mitmproxy
-mycli
-notebook
-pgcli
 pylint
 pytest
 yapf
+
+# network
+mitmproxy
+
+# utilities
+csvkit
+notebook
 youtube-dl
