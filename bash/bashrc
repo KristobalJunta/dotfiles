@@ -83,11 +83,8 @@ fi
 alias mc="mc -b"
 
 # set vim as default editor
-VISUAL=$(which vim)
-EDITOR=$(which vim)
-
-export VISUAL
-export EDITOR
+export VISUAL=$(which vim)
+export EDITOR=$(which vim)
 
 export LC_ALL=en_US.UTF-8
 
