@@ -3,6 +3,6 @@
 
 if [ -z "$(command -v starship)" ]; then
     curl -fsSL https://starship.rs/install.sh > starship_installer.sh
-    bash starship_installer.sh -b "$HOME/bin" -f
+    sh starship_installer.sh -b "$HOME/bin" -f
     rm starship_installer.sh
 fi
