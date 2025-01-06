@@ -42,5 +42,5 @@ format = "on [$branch]($style) "
 
 [env_var]
 variable = "PROMPT_EMOJI"
-default = "🚀🚀🚀"
+default = "✨✨✨"
 format = "[$env_value]($style) "

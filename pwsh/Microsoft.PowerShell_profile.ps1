@@ -1,8 +1,12 @@
+clear
+
 Set-PSReadlineKeyHandler -Chord Ctrl+d -Function DeleteCharOrExit
 Set-Alias -Name compose -Value docker-compose
-Set-Alias -Name vim -Value 'C:\Program Files\Git\usr\bin\vim'
 
-clear
+# remove weird blue bg from directory names in ls output
+$PSStyle.FileInfo.Directory = "`e[34;1m"
+
+Import-Module -Name Microsoft.WinGet.CommandNotFound
 
 Switch (( get-date ).DayOfWeek)
 {
