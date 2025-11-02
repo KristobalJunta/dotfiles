@@ -37,13 +37,6 @@
       "ManagerName": "Winget"
     },
     {
-      "Id": "Amazon.AWSCLI",
-      "Name": "AWS Command Line Interface",
-      "Version": "2.31.26.0",
-      "Source": "winget",
-      "ManagerName": "Winget"
-    },
-    {
       "Id": "BillStewart.SyncthingWindowsSetup",
       "Name": "Syncthing",
       "Version": "Unknown",
@@ -472,13 +465,6 @@
       "ManagerName": "Winget"
     },
     {
-      "Id": "Playnite.Playnite",
-      "Name": "Playnite",
-      "Version": "10.38",
-      "Source": "winget",
-      "ManagerName": "Winget"
-    },
-    {
       "Id": "Proton.ProtonVPN",
       "Name": "Proton VPN",
       "Version": "4.3.5",
@@ -843,13 +829,6 @@
       "Id": "psutil",
       "Name": "Psutil",
       "Version": "7.1.3",
-      "Source": "pip",
-      "ManagerName": "Pip"
-    },
-    {
-      "Id": "psutil",
-      "Name": "Psutil",
-      "Version": "7.1.2",
       "Source": "pip",
       "ManagerName": "Pip"
     },
@@ -1620,12 +1599,6 @@
       "Id": "MSIX\\Microsoft.Winget.Fonts.Source_2025.1016.311.49_neutral__8wekyb3d8bbwe",
       "Name": "Windows Package Manager Source (winget-font) V2",
       "Version": "2025.1016.311.49",
-      "Source": "Microsoft Store"
-    },
-    {
-      "Id": "MSIX\\Microsoft.Winget.Source_2025.1102.1422.3_neutral__8wekyb3d8bbwe",
-      "Name": "Windows Package Manager Source (winget) V2",
-      "Version": "2025.1102.1422.3",
       "Source": "Microsoft Store"
     },
     {
