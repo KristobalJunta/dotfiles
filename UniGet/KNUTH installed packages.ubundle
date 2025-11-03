@@ -216,6 +216,13 @@
       "ManagerName": "Winget"
     },
     {
+      "Id": "Microsoft.OneDrive",
+      "Name": "Microsoft OneDrive",
+      "Version": "25.194.1005.0003",
+      "Source": "winget",
+      "ManagerName": "Winget"
+    },
+    {
       "Id": "Microsoft.OpenJDK.21",
       "Name": "Microsoft Build of OpenJDK with Hotspot 21",
       "Version": "21.0.8.9",
@@ -1212,9 +1219,9 @@
       "Source": "Microsoft Store"
     },
     {
-      "Id": "MSIX\\Microsoft.HEVCVideoExtension_2.4.13.0_x64__8wekyb3d8bbwe",
+      "Id": "MSIX\\Microsoft.HEVCVideoExtension_2.4.25.0_x64__8wekyb3d8bbwe",
       "Name": "HEVC Video Extensions from Device Manufacturer",
-      "Version": "2.4.13.0",
+      "Version": "2.4.25.0",
       "Source": "Microsoft Store"
     },
     {
@@ -1308,9 +1315,9 @@
       "Source": "Microsoft Store"
     },
     {
-      "Id": "MSIX\\Microsoft.OneDriveSync_24116.609.5.0_neutral__8wekyb3d8bbwe",
+      "Id": "MSIX\\Microsoft.OneDriveSync_25194.1005.3.0_neutral__8wekyb3d8bbwe",
       "Name": "OneDrive",
-      "Version": "24116.609.5.0",
+      "Version": "25194.1005.3.0",
       "Source": "Microsoft Store"
     },
     {
@@ -1602,9 +1609,9 @@
       "Source": "Microsoft Store"
     },
     {
-      "Id": "MSIX\\Microsoft.Winget.Source_2025.1102.2150.6_neutral__8wekyb3d8bbwe",
+      "Id": "MSIX\\Microsoft.Winget.Source_2025.1102.2327.25_neutral__8wekyb3d8bbwe",
       "Name": "Windows Package Manager Source (winget) V2",
-      "Version": "2025.1102.2150.6",
+      "Version": "2025.1102.2327.25",
       "Source": "Microsoft Store"
     },
     {
