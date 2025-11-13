@@ -1,7 +1,6 @@
 clear
 
 Set-PSReadlineKeyHandler -Chord Ctrl+d -Function DeleteCharOrExit
-Set-Alias -Name compose -Value docker-compose
 
 # remove weird blue bg from directory names in ls output
 $PSStyle.FileInfo.Directory = "`e[34;1m"
