@@ -40,7 +40,7 @@ disabled = true
 [git_branch]
 format = "on [$branch]($style) "
 
-[env_var]
+[env_var.PROMPT_EMOJI]
 variable = "PROMPT_EMOJI"
 default = "✨✨✨"
 format = "[$env_value]($style) "
