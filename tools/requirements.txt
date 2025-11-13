@@ -1,20 +1,11 @@
 # database tools
 litecli
-mycli
 pgcli
 
 # dev tools
-awscli
 black
-flake8
 ipython
 isort
-pylint
-pytest
-yapf
-
-# network
-mitmproxy
 
 # utilities
 csvkit
