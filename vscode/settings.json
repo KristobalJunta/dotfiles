@@ -112,6 +112,7 @@
         "file:///c%3A/Users/ytverdokhlib/.vscode/extensions/atlassian.atlascode-4.0.8/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "python.languageServer": "Pylance",
-    "python.defaultInterpreterPath": "c:\\Users\\ytverdokhlib\\AppData\\Local\\Programs\\Python\\Python314\\python.exe"
+    "python.defaultInterpreterPath": "c:\\Users\\ytverdokhlib\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "python.analysis.typeCheckingMode": "standard"
 }
 
