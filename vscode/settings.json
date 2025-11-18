@@ -1,0 +1,117 @@
+{
+    "security.workspace.trust.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    // window
+    "window.newWindowProfile": "Default",
+    "window.titleBarStyle": "custom",
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}Visual Studio Code",
+    "window.restoreWindows": "none",
+    "window.density.editorTabHeight": "compact",
+    // editor
+    "editor.detectIndentation": true,
+    "editor.dragAndDrop": false,
+    "editor.renderWhitespace": "all",
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.fontFamily": "FiraCode NF, monospace",
+    "editor.fontLigatures": "'ss08', 'ss05', 'ss04', 'ss01'",
+    "editor.rulers": [
+        88,
+        120
+    ],
+    "editor.cursorBlinking": "phase",
+    "editor.minimap.maxColumn": 200,
+    "editor.minimap.showSlider": "always",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.suggest.showMethods": true,
+    "editor.suggest.preview": true,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.snippetSuggestions": "top",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    // workbench
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "workbench.editor.languageDetection": false,
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.iconTheme": "bearded-icons",
+    "workbench.tree.indent": 20, // recommeded for bearded-icons
+    "workbench.activityBar.location": "top",
+    "workbench.colorTheme": "Pop Dark",
+    "workbench.preferredDarkColorTheme": "Pop Dark",
+    "workbench.preferredLightColorTheme": "Pop Light",
+    "workbench.editor.enablePreview": false,
+    // explorer
+    "explorer.openEditors.visible": 1,
+    "explorer.confirmDelete": false,
+    // files
+    "files.insertFinalNewline": true,
+    "files.associations": {
+        "*.p": "gnuplot",
+        "Vagrantfile": "ruby",
+        "*.jl": "json",
+        ".style.yapf": "ini",
+        ".pylintrc": "ini",
+        ".docker_env": "dotenv"
+    },
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // extensions
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "handlebars": "html",
+        "blade": "html"
+    },
+    "markdown.preview.doubleClickToSwitchToEditor": false,
+    "markdown.updateLinksOnFileMove.enabled": "always",
+    "git.ignoreMissingGitWarning": true,
+    "git.confirmSync": false,
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "cgmanifest.json"
+            ],
+            "url": "./.vscode/cgmanifest.schema.json"
+        },
+        {
+            "fileMatch": [
+                "cglicenses.json"
+            ],
+            "url": "./.vscode/cglicenses.schema.json"
+        }
+    ],
+    "extensions.ignoreRecommendations": true,
+    "problems.showCurrentInStatus": true,
+    "git.blame.editorDecoration.enabled": false,
+    "git.openRepositoryInParentFolders": "never",
+    "debug.toolBarLocation": "commandCenter",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "yaml.schemas": {
+        "file:///c%3A/Users/ytverdokhlib/.vscode/extensions/atlassian.atlascode-4.0.8/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "python.languageServer": "Pylance",
+    "python.defaultInterpreterPath": "c:\\Users\\ytverdokhlib\\AppData\\Local\\Programs\\Python\\Python314\\python.exe"
+}
+
