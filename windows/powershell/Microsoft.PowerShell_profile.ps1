@@ -1,11 +1,20 @@
-clear
+try {
+    [Console]::InputEncoding  = [System.Text.Encoding]::UTF8
+    [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+    $OutputEncoding = [System.Text.UTF8Encoding]::new($false)
+    chcp 65001 > $null
+} catch {}
 
+# set Ctrl+D as "exit shell" hotkey
 Set-PSReadlineKeyHandler -Chord Ctrl+d -Function DeleteCharOrExit
 
-# remove weird blue bg from directory names in ls output
+# removes a weird blue highligitng of directory names in output of `ls`
 $PSStyle.FileInfo.Directory = "`e[34;1m"
 
-Import-Module -Name Microsoft.WinGet.CommandNotFound
+# disabled to speed up loading the proifile
+# if (Get-Module -ListAvailable -Name Microsoft.WinGet.CommandNotFound) {
+#     Import-Module -Name Microsoft.WinGet.CommandNotFound
+# }
 
 Switch (( get-date ).DayOfWeek)
 {
@@ -19,4 +28,19 @@ Switch (( get-date ).DayOfWeek)
     default     { $env:PROMPT_EMOJI = '✨✨✨' }
 }
 
-Invoke-Expression (&starship init powershell)
+Clear-Host
+
+if (Get-Command fastfetch -ErrorAction SilentlyContinue) {
+    fastfetch
+    # alternatively, to force loading profile from a file use:
+    # fastfetch -c "$HOME\.config\fastfetch\config.jsonc"
+}
+
+if (Get-Command starship -ErrorAction SilentlyContinue) {
+    Invoke-Expression (&starship init powershell)
+}
+
+# Aliases
+Set-Alias -Name lg -Value "lazygit"
+Set-Alias -Name vim -Value "nvim"
+Set-Alias -Name vi -Value "nvim"
