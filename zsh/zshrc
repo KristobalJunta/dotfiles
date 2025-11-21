@@ -44,3 +44,6 @@ eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 eval "$(kubectl completion zsh)"
 eval "$(zoxide init zsh)"
+
+alias lg=lazygit
+
