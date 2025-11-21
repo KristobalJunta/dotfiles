@@ -40,3 +40,7 @@ fi
 
 [[ -f "/usr/sbin/wsl2-ssh-agent" ]] && eval "$(/usr/sbin/wsl2-ssh-agent)"
 
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+eval "$(kubectl completion zsh)"
+eval "$(zoxide init zsh)"
