@@ -25,7 +25,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git helm kubectl nvm pyenv python vscode)
+plugins=(git helm kubectl kubectx nvm pyenv python vscode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,6 +37,9 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+
+# add kube context to prompt
+RPS1="$RPS1"'$(kubectx_prompt_info)'
 
 [[ -f "/usr/sbin/wsl2-ssh-agent" ]] && eval "$(/usr/sbin/wsl2-ssh-agent)"
 
