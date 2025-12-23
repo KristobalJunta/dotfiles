@@ -44,3 +44,6 @@ if (Get-Command starship -ErrorAction SilentlyContinue) {
 Set-Alias -Name lg -Value "lazygit"
 Set-Alias -Name vim -Value "nvim"
 Set-Alias -Name vi -Value "nvim"
+
+$env:XDG_CONFIG_HOME = "$HOME/.config"
+
