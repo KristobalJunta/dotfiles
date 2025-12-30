@@ -23,9 +23,10 @@ set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 
 " set backupdir=~/.cache/vim " Directory to store backup files.
-" set mouse=v                 " middle-click paste with 
-" set mouse=a                 " enable mouse click
 " set clipboard=unnamedplus   " using system clipboard
+
+" fully disable mouse
+set mouse=
 
 filetype plugin on
 filetype plugin indent on   " allow auto-indenting depending on file type
