@@ -59,6 +59,7 @@ eval "$(kubectl completion zsh)"
 eval "$(zoxide init zsh)"
 
 alias lg=lazygit
+alias ld=lazydocker
 
 if [[ -o interactive ]]; then
     fastfetch
