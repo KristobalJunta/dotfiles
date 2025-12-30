@@ -1,0 +1,23 @@
+gui:
+  language: en
+  returnImmediately: true
+customCommands:
+  containers:
+  - name: shell
+    attach: true
+    command: docker exec -it {{ .Container.ID }} /bin/sh
+    serviceNames: []
+  images:
+  - name: run
+    attach: true
+    command: docker run --rm -it {{ .Image.Name }}:{{.Image.Tag}}
+    serviceNames: []
+  - name: run with sh
+    attach: true
+    command: docker run --rm -it --entrypoint sh {{ .Image.Name }}:{{.Image.Tag}}
+    serviceNames: []
+  volumes:
+  - name: shell in volume
+    attach: true
+    command: docker run --rm -it -v {{ .Volume.Name }}:/data -w /data alpine /bin/sh
+    serviceNames: []
