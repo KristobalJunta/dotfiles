@@ -49,7 +49,6 @@ fi
 
 ## Prompt tweaks
 RPS1="$RPS1"'$(kubectx_prompt_info)'
-# TODO pyenv_prompt_info
 
 [[ -f "/usr/sbin/wsl2-ssh-agent" ]] && eval "$(/usr/sbin/wsl2-ssh-agent)"
 
