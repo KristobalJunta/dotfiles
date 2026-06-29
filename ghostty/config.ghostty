@@ -1,4 +1,16 @@
 # https://ghostty.org/docs/config/reference
 
 window-width = 124
-window-height = 34
+window-height = 42
+window-padding-x = 4
+window-padding-y = 4
+
+window-inherit-working-directory = false
+tab-inherit-working-directory = true
+split-inherit-working-directory = true
+
+font-family = "FiraCode Nerd Font"
+
+theme = dracula
+window-theme = ghostty
+
