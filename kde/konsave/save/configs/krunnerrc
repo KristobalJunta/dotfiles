@@ -1,0 +1,14 @@
+[General]
+FreeFloating=true
+historyBehavior=ImmediateCompletion
+
+[Plugins]
+browserhistoryEnabled=false
+browsertabsEnabled=false
+krunner_katesessionsEnabled=false
+krunner_keysEnabled=true
+krunner_shellEnabled=false
+krunner_webshortcutsEnabled=false
+
+[Plugins][Favorites]
+plugins=krunner_sessions,krunner_powerdevil,krunner_services,krunner_systemsettings
