@@ -1,47 +1,36 @@
-export PATH=$HOME/bin:$HOME/.local/bin:$PATH
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-## ZSH configs
-##
 export ZSH="$HOME/.oh-my-zsh"
-# move .zcomdump-* files from home dir
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-
-ZSH_THEME="kennethreitz"
-HYPHEN_INSENSITIVE="true"
-HIST_STAMPS="dd.mm.yyyy"
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
 
+# move .zcomdump-* files from home dir
+# export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+HYPHEN_INSENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+HIST_STAMPS="dd.mm.yyyy"
 
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git nvm python vscode)
+zstyle ':omz:update' mode reminder
 
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+plugins=(git python)
 
 source $ZSH/oh-my-zsh.sh
+
+# User configuration
 
 if [[ -o interactive ]]; then
     fastfetch
 fi
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
-eval "$(kubectl completion zsh)"
 eval "$(zoxide init zsh)"
-eval "$(zellij setup --generate-auto-start zsh)"
-
-alias lg=lazygit
-alias ld=lazydocker
-alias vim=nvim
-alias vi=nvim
-alias cat=bat
+# eval "$(zellij setup --generate-auto-start zsh)"

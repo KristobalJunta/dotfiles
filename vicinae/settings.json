@@ -29,6 +29,7 @@
       "rounding": 5,
       "material": "none"
    },
+   "favorites": [],
    "providers": {
       "applications": {
          "entrypoints": {
