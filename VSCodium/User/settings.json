@@ -19,6 +19,7 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.inlineSuggest.enabled": true,
+  "editor.minimap.renderCharacters": false,
 
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -28,12 +29,21 @@
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.editor.languageDetection": false,
   "workbench.editor.empty.hint": "hidden",
+  "workbench.iconTheme": "bearded-icons",
+  "workbench.activityBar.location": "top",
+  "workbench.preferredDarkColorTheme": "Dracula Theme",
+  "workbench.colorTheme": "Dracula Theme",
+
   "window.titleBarStyle": "custom",
-  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}Visual Studio Code",
+  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}VSCodium",
   "window.restoreWindows": "none",
+  "window.density.editorTabHeight": "compact",
+  "window.autoDetectHighContrast": false,
 
   "explorer.openEditors.visible": 1,
   "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
   "files.insertFinalNewline": true,
   "files.associations": {
     "*.p": "gnuplot",
@@ -42,16 +52,6 @@
     ".style.yapf": "ini",
     ".pylintrc": "ini",
     ".docker_env": "dotenv"
-  },
-
-  "[markdown]": {
-    "files.trimTrailingWhitespace": false,
-    "editor.wordWrap": "on",
-    "editor.quickSuggestions": {
-      "comments": "off",
-      "strings": "off",
-      "other": "off"
-    },
   },
 
   "notebook.cellToolbarLocation": {
@@ -63,6 +63,16 @@
   "emmet.includeLanguages": {
     "handlebars": "html",
     "blade": "html"
+  },
+
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
   },
 
   "[javascript]": {
@@ -81,6 +91,8 @@
 
   "git.ignoreMissingGitWarning": true,
   "git.confirmSync": false,
+  "git.blame.editorDecoration.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
 
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.blame.ignoreWhitespace": true,
@@ -104,36 +116,9 @@
     }
   ],
 
-  "python.languageServer": "Pylance",
-
   "extensions.ignoreRecommendations": true,
   "problems.showCurrentInStatus": true,
-  "toggle-theme.saved-theme": "One Dark Pro",
   "cmake.configureOnOpen": true,
-  "python.terminal.activateEnvironment": false,
-  "security.allowedUNCHosts": [
-    "wsl.localhost"
-  ],
-  "workbench.iconTheme": "bearded-icons",
-  "git.blame.editorDecoration.enabled": false,
-  "workbench.activityBar.location": "top",
-  "window.density.editorTabHeight": "compact",
   "chat.commandCenter.enabled": false,
-  "window.autoDetectHighContrast": false,
-  "editor.minimap.renderCharacters": false,
-  "workbench.preferredDarkColorTheme": "One Dark Pro",
-  "workbench.colorTheme": "Dracula Theme",
   "debug.toolBarLocation": "commandCenter",
-  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
-  "git.openRepositoryInParentFolders": "never",
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
-  "explorer.confirmDragAndDrop": false,
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  }
 }
