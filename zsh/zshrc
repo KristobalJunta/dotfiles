@@ -30,6 +30,12 @@ fi
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+alias lg=lazygit
+alias ld=lazydocker
+alias vim=nvim
+alias vi=nvim
+alias cat=bat
+
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 eval "$(zoxide init zsh)"
