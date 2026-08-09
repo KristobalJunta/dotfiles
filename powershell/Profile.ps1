@@ -32,8 +32,6 @@ Clear-Host
 
 if (Get-Command fastfetch -ErrorAction SilentlyContinue) {
     fastfetch
-    # alternatively, to force loading profile from a file use:
-    # fastfetch -c "$HOME\.config\fastfetch\config.jsonc"
 }
 
 if (Get-Command starship -ErrorAction SilentlyContinue) {
@@ -46,4 +44,3 @@ Set-Alias -Name vim -Value "nvim"
 Set-Alias -Name vi -Value "nvim"
 
 $env:XDG_CONFIG_HOME = "$HOME/.config"
-

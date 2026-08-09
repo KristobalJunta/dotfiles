@@ -1,5 +1,0 @@
-
-
-
-# Added by Antigravity CLI installer
-export PATH="/home/eugene/.local/bin:$PATH"
