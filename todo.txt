@@ -1,0 +1,8 @@
+chezmoi
+- ghostty config pre script
+    - install theme
+- vs code config script
+    - install extensions
+- gitconfig.user -> template file
+- integrate konsave
+
