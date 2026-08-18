@@ -33,6 +33,9 @@
    "providers": {
       "applications": {
          "entrypoints": {
+            "codium": {
+               "alias": "code"
+            },
             "com.mitchellh.ghostty": {
                "alias": "terminal"
             }
@@ -48,6 +51,13 @@
             },
             "sponsor": {
                "enabled": false
+            }
+         }
+      },
+      "power": {
+         "entrypoints": {
+            "power-off": {
+               "alias": "shutdown"
             }
          }
       },
