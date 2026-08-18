@@ -15,7 +15,7 @@ HYPHEN_INSENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd.mm.yyyy"
 
-zstyle ':omz:update' mode reminder
+zstyle ':omz:update' mode auto
 
 plugins=(git python)
 
