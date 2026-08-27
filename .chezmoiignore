@@ -1,6 +1,8 @@
+# patterns match against the target path, not the source path
+
 powershell
 kde
 nvim
-VSCodium/extensions.txt
-VSCodium/extensions.ps1
+.config/VSCodium/extensions.ps1
+.config/VSCodium/extensions.txt
 README.md
