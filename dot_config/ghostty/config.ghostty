@@ -11,6 +11,5 @@ split-inherit-working-directory = true
 
 font-family = "FiraCode Nerd Font"
 
-theme = Dracula
+theme = dracula
 window-theme = ghostty
-
