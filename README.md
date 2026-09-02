@@ -4,11 +4,7 @@ dotfiles & configs repo
 
 ## TODO
 
-chezmoi:
-- [ ] vs code config script
-    - install extensions
 - [ ] gitconfig.user -> convert into template file
-- [ ] integrate konsave profile as folder
 
 ## Apps and tools
 

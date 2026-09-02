@@ -1,12 +1,4 @@
 # patterns match against the target path, not the source path
 
-powershell
-kde
 nvim
-.config/VSCodium/extensions.ps1
-.config/VSCodium/extensions.txt
 README.md
-
-{{ if ne .chezmoi.os "linux" }}
-.config/konsave/
-{{ end }}
