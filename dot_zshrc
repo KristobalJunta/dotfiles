@@ -6,7 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # DISABLE_MAGIC_FUNCTIONS="true"
 
 # move .zcomdump-* files from home dir
-# export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
