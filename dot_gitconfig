@@ -1,29 +1,63 @@
 [push]
-	default = simple
+    default = simple
+    autoSetupRemote = true
 
 [pull]
-	rebase = true
+    rebase = true
 
 [alias]
-	br = branch
-	ci = commit
-	co = checkout
-	rb = rebase
-	st = status
-	sw = switch
-	# a recursive alias to handle accidental `git git status`
-	git = !git
+    br = branch
+    ci = commit
+    co = checkout
+    st = status
+    sw = switch
+    # a recursive alias to handle accidental `git git status`
+    git = !git
 
 [include]
-	path = ~/.gitconfig.user
-	path = ~/.gitconfig.delta
+    path = ~/.gitconfig.user
 
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
 
 [core]
-	autocrlf = input
+    autocrlf = input
+    excludesFile = ~/.gitignore
+    pager = delta --dark
 
+[interactive]
+    diffFilter = delta --color-only --highlight-removed
+
+[delta]
+    navigate = true
+    syntax-theme = Dracula
+
+[merge]
+    conflictStyle = zdiff3
+
+[diff]
+    algorithm = patience
+
+[fetch]
+    prune = true
+    output = compact
+    parallel = 0
+
+[help]
+    autoCorrect = 1
+
+[init]
+    defaultBranch = main
+
+[log]
+    decorate = short
+
+[rebase]
+    autoStash = true
+    updateRefs = true
+
+[rerere]
+    enabled = true
