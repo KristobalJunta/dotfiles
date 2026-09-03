@@ -1,4 +1,3 @@
 # patterns match against the target path, not the source path
 
-nvim
 README.md

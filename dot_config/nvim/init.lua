@@ -54,4 +54,4 @@ vim.opt.scrolloff = 3
 -- Ask for confirmation when handling unsaved or read-only files
 vim.opt.confirm = true
 
-require("config.lazy")
+-- require("config.lazy")
