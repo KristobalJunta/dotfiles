@@ -3,8 +3,6 @@
 README.md
 kde
 
-nvim
-
 {{ if ne .chezmoi.os "linux" }}
 .config/konsave/
 .config/VSCodium
