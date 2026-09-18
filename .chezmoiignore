@@ -1,0 +1,15 @@
+# patterns match against the target path, not the source path
+
+README.md
+kde
+
+{{ if ne .chezmoi.os "linux" }}
+.config/konsave/
+.config/VSCodium
+.config/vicinae
+.docker/config.json
+{{ end }}
+
+{{ if ne .chezmoi.os "windows" }}
+.config/PowerShell
+{{ end }}
