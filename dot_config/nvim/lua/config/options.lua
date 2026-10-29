@@ -2,7 +2,9 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
-LazyVim.terminal.setup("pwsh")
+if vim.fn.has("win32") == 1 then
+  LazyVim.terminal.setup("pwsh")
+end
 
 vim.cmd('language en_US.UTF-8')
 vim.cmd("syntax on")
